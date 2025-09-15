@@ -1,0 +1,10 @@
+1. hozzunk létre egy routes js fájlt
+2. Legyen benne egy express router
+3. lehessen használni benne a dbHandlert és a JWT is
+4. legyen benne egy regisztrációs route:
+    /registration
+    -username => null check - 400
+    -password => null check - 400
+    existing user check - 409
+    creating new user
+    return 201 + message

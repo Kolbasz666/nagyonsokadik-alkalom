@@ -1,0 +1,7 @@
+1. hozd létre az adatbázis kapcsolatot
+2. legyen az adatbázis neve "data"
+3. tábla neve: user - legyen benne:
+	id - automatikusan nő
+	username - szöveg, nem lehet üres
+	password - szöveg, nem lehet üres
+4. exportáld ki

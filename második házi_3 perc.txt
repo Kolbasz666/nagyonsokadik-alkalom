@@ -1,0 +1,6 @@
+1. hozz létre egy szervert, expressel
+2. a szerver használja a cors-t és kezelje a json-t
+3. szikronizálja az adatbázist
+4. .env-ből olvassa ki a port-ot
+5. legyen .env porttal
+6. használja a routes js fájlt a '/' route-hoz csatlakoztatva
