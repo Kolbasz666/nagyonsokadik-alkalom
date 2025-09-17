@@ -5,13 +5,10 @@ const routes = require('./routes')
 
 require('dotenv').config()
 
-dbHandler.user.sync({force: true})
+//dbHandler.user.sync({alter: true})
 
 const PORT = process.env.PORT
 const server = express()
-
-//csak tesztelésre!!!!
-server.use(express.static('public'))
 
 server.use(cors())
 server.use(express.json())

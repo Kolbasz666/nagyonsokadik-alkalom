@@ -1,12 +1,6 @@
-function kolbasz(){
+async function kolbasz(){
     document.body.style.backgroundColor = "lime"
-    fetch('/user',{
-        method:"POST",
-        body: JSON.stringify({
-            username:'szalonna'
-        }),
-        headers:{
-            'Content-Type':'Application/JSON'
-        }
-    })
+    const response = await fetch('/users')
+    const result = await response.json()
+    console.log(result)
 }
