@@ -21,4 +21,22 @@ const userTable = dbHandler.define('users',{
     }
 })
 
+const artworkTable = dbHandler.define('artworks',{
+    id:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    title:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    value:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
+})
+
 exports.user = userTable
+exports.artwork = artworkTable

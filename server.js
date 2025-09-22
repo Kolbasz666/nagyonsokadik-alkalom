@@ -6,6 +6,7 @@ const routes = require('./routes')
 require('dotenv').config()
 
 //dbHandler.user.sync({alter: true})
+//dbHandler.artwork.sync({alter: true})
 
 const PORT = process.env.PORT
 const server = express()
