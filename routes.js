@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
     })
 
     if (!oneUser) {
-        return res.status(409).json({ 'message': 'Nem létezik ilyen felhasználó' }).end()
+        return res.status(401).json({ 'message': 'Nem létezik ilyen felhasználó' }).end()
     }
 
     //token generálás
