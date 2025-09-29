@@ -117,6 +117,27 @@ router.delete('/artworks/:id', Auth(), async (req, res) => {
     res.status(200).json({ message: "Műalkotás sikeresen törölve" }).end()
 })
 
+router.put('/artworks', async (req, res) => {
+    if (!req.body?.id) {
+        return res.status(400).json({ message: 'hiányzó ID' }).end()
+    }
+    if (!req.body?.value) {
+        return res.status(400).json({ message: 'hiányzó érték' }).end()
+    }
+    const oneArtwork = await dbHandler.artwork.findOne({ where: { id: req.body.id } })
+    if (!oneArtwork) {
+        return res.status(400).json({ message: 'nincs ilyen műalkotás' }).end()
+    }
+    await dbHandler.artwork.update({
+        value: req.body.value
+    }, {
+        where: {
+            id: req.body.id
+        }
+    })
+    res.status(200).json({message:'sikeres módosítás'}).end()
+})
+
 function Auth() {
     return (req, res, next) => {
         const auth = req.headers.authorization
